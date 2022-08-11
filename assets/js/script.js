@@ -30,3 +30,19 @@ let formButton = document.createElement("button");
 formButton.setAttribute("type", "submit");
 formButton.classList= ("btn fas fa-search");
 dynFormContainer.appendChild(formButton);
+
+// Find the city form
+let seachEventHanglerEl = document.querySelector("#dymCityForm");
+let searchByCityEl = document.querySelector("#city-name");
+
+
+// Left column cities container
+let citiesContainerEl = document.createElement("div");
+citiesContainerEl.setAttribute("id", "dym-cities-list");
+citiesContainerEl.classList = "list-group";
+
+// Append to the left column
+leftColumnEL.appendChild(citiesContainerEl);
+
+// Find the list div container
+let citiesListContainerEl = document.querySelector("#dym-cities-list");
