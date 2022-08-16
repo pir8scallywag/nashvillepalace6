@@ -36,9 +36,11 @@ The following image demonstrates the application functionality:
 
 You are required to submit the following for review:
 
-* The URL of the deployed application.
+* The URL of the deployed application.:
+https://pir8scallywag.github.io/nashvillepalace6/
 
 * The URL of the GitHub repository. Give the repository a unique name and include a high-quality README describing the project.
+https://github.com/pir8scallywag/nashvillepalace6
 
 - - -
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
