@@ -26,18 +26,7 @@ var getWeatherData = function(event) {
     console.log(openWeatherApiUrl);
     
 
-    /*
-
-    .attr('type', 'text') // Text input type
-    .attr('id', `input-${hourIndex}`) // Create a index of the input for track purposes
-    .attr('hour-index', hourIndex); // To be used to change clors of the input task.
-    
-    
-
-    var repoEl = document.createElement("a");
-    repoEl.classList = "list-item flex-row justify-space-between align-center";
-    repoEl.setAttribute("href", "./single-repo.html?repo=" + repoName);
-    */
+   
 
 
     // Clear the element of input and save it to a variable that will display it on the saved cities
