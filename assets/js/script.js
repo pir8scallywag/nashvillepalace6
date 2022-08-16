@@ -73,7 +73,6 @@ var populateSavedCities = function() {
          cityNameEl.setAttribute("role", "button");
          cityNameEl.classList = "list-group-item list-group-item-action list-group-item-primary";
          cityNameEl.textContent = citiesLocalStorage[i];
-         //citiesListContainerEl.appendChild(cityNameEl);
          // dynContainer
          citiesContainerEl.appendChild(cityNameEl);
      };
@@ -137,7 +136,6 @@ function populateCurrentDayHtml(searchByCity, fullDayDaily, currentDayIcon, curr
  currentDayTitle.textContent = ( searchByCity.charAt(0).toUpperCase() + searchByCity.slice(1) + " " + fullDayDaily);
 
  let currentIconEl = document.createElement("span")
-// "<i class='fas fa-check-square status-icon icon-success'></i>"
  let currentIconSymbol = "http://openweathermap.org/img/wn/" + currentDayIcon + "@2x.png";
 // alert(currentIconSymbol);
 currentIconEl.innerHTML = "<img src=" + currentIconSymbol + "></img>";
@@ -260,16 +258,15 @@ var getWeatherData = function (event , cityClicked) {
 
  if (cityClicked) {
       // get value from input elementgit 
-     // *** var searchByCity = cityClicked.trim().toLowerCase();
+     
      var searchByCity = cityClicked.trim();
      //console.log("The selected by user is: " + searchByCity);
      //alert("This is a click coming from the list as " + searchByCity);
  } else { // City has been entered from the search bar
      // get value from input elementgit 
-     // *** var searchByCity = searchByCityEl.value.trim().toLowerCase();
+     
      var searchByCity = searchByCityEl.value.trim();
      //console.log("The selected by user is: " + searchByCity);
-     //alert("This is a click coming from the search bar as " + searchByCity);
  };
 
  // If field emtpy to not fetch any data
@@ -351,12 +348,11 @@ var getWeatherData = function (event , cityClicked) {
      // *** After all items have been pushed to array populate the cities in html
      // There is no functionality to clear cities, but it can be added.
      // You can also delete the savedCities Key using Chrome Dev Tools.
-     // citiesSearched = []; 
+
      populateSavedCities(); // Second after a push has been done.
    }).catch(function(error) { // fetch api way of handling network errors.
      // Notice this `.catch()` getting chained onto the end of the `.then()` method
-     //alert("Unable to connect to OpenWeather");
-     //alert(error.response)
+   
      return;
    });
 
@@ -372,7 +368,6 @@ var cityClicked = function (event) {
  let cityClicked = event.target.getAttribute("data-city")
  if (cityClicked){
      getWeatherData(event, cityClicked);
-     //alert(cityClicked)
  } else { // If the value is empty, it should not happen but it is a failsafe.
      alert("Internal erro found, please email esroleo@gmail.com.\nPlease provide story of issue in order for it to be fixed");
  };
